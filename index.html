@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIQC9_BranchForge v2.4 – Dashboard Integrated Map</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f7fc; }
+    h1 { text-align: center; padding: 1rem; color: #002244; }
+    #container { display: flex; }
+    #dashboard {
+      width: 320px; background: #ffffff; padding: 1rem;
+      border-right: 2px solid #ccc; overflow-y: auto; height: 90vh;
+    }
+    #dashboard h2 { font-size: 1.1rem; margin-bottom: 1rem; color: #003366; }
+    #dashboard table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    #dashboard th, #dashboard td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+    #dashboard th { background: #eef2f7; }
+    svg { flex: 1; height: 90vh; cursor: grab; }
+    .node circle { cursor: pointer; stroke-width: 3px; }
+    .node text { font-size: 12px; fill: #000; pointer-events: none; }
+    .link { stroke: #bbb; stroke-width: 2px; }
+    .popup {
+      position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+      background: #fff; padding: 1.5rem; border: 2px solid #004466;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25); border-radius: 12px; display: none; width: 500px;
+    }
+    .popup h3 { margin-top: 0; }
+    .popup button {
+      background: #004466; color: white; border: none;
+      padding: 0.5rem 1rem; border-radius: 5px; margin-top: 1rem; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>SIQC9_BranchForge v2.4 – Quantum Dashboard Map</h1>
+  <div id="container">
+    <div id="dashboard">
+      <h2>QPulse Escalation Dashboard</h2>
+      <table>
+        <tr><th>Node</th><th>Status</th><th>Timeline</th></tr>
+        <tr><td>Arctic Sub Escalation</td><td>Critical</td><td>Immediate</td></tr>
+        <tr><td>NATO Surveillance Surge</td><td>Volatile</td><td>72h–1mo</td></tr>
+        <tr><td>Greenland Doctrine Triggered</td><td>Critical</td><td>48h</td></tr>
+        <tr><td>AI Misread Flare</td><td>Unstable</td><td>Real-Time</td></tr>
+        <tr><td>Chinese Arctic Post</td><td>Volatile</td><td>1–3mo</td></tr>
+        <tr><td>Brazil Grey Swan</td><td>Unstable</td><td>Mid-Term</td></tr>
+        <tr><td>Orbital Denial Event</td><td>Critical</td><td>Underway</td></tr>
+        <tr><td>EcoFront Uprising</td><td>Unstable</td><td>3–6mo</td></tr>
+        <tr><td>Cyber Ransom Cascade</td><td>Critical</td><td>Immediate</td></tr>
+        <tr><td>Denmark Internal Collapse</td><td>Volatile</td><td>1 Month</td></tr>
+        <tr><td>UN Polar Mediation</td><td>Stable</td><td>Low</td></tr>
+        <tr><td>AI Weapon Leakage</td><td>Critical</td><td>6–12mo+</td></tr>
+        <tr><td>Naval Collision Course</td><td>Critical</td><td>72h</td></tr>
+        <tr><td>Energy Corridor Sabotage</td><td>Volatile</td><td>Mid-Term</td></tr>
+        <tr><td>QAxion Reroute Trigger</td><td>Unstable</td><td>Ongoing</td></tr>
+      </table>
+    </div>
+    <svg></svg>
+  </div>
+</body>
+</html>
